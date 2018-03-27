@@ -1,0 +1,102 @@
+/*login style*/
+#login{
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	position: absolute;
+	margin: auto;
+	width:400px;
+	height: 400px;
+	background-color: blue;
+}
+.inp{
+	left:0px;
+	right:0px;
+	position: absolute;
+	margin: auto;
+	width:50%;
+	height:30px;
+}
+#pass_inp{
+	top:100px;
+}
+#user_inp{
+	top:50px;
+}
+#login_submit{
+	right:50px;
+	bottom:50px;
+	position: absolute;
+}
+
+/*home style*/
+#header{
+	width:100%;
+	background-color: red;
+	top:0px;
+	position: absolute;
+	left: 0px;
+	height:40px;
+}
+#signup_but{
+	right:100px;
+}
+.but{
+	right:10px;
+	position: absolute;
+	top:25%;
+}
+#center{
+	width:75%;
+	height:80%;
+	top:15%;
+	left:2.5%;
+	position: absolute;
+	margin: auto;
+	background-color: black;
+	overflow: auto;
+}
+#sidebar{
+	width:17.5%;
+	height:80%;
+	top:15%;
+	right:2.5%;
+	position: absolute;
+	margin: auto;
+	background-color: black;
+}
+#side_header{
+	top:5px;
+	position:absolute;
+	background-color: red;
+}
+#search_inp{
+	margin-left: 5px;
+	width:50%
+}
+#search_but{
+	right:5px;
+}
+#search_results{
+	background-color: blue;
+	bottom:0px;
+	height:90%;
+	width:100%;
+	position: absolute;
+	overflow: auto;
+}
+.thumb{
+	width:48%;
+	height:auto;
+}
+#thumb{
+	width:20%;
+	height: 100%
+	
+}
+.image{
+	height:100%;
+	width:auto;
+}
+/*seats style*/
