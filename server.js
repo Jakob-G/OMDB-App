@@ -24,11 +24,11 @@ app.use(express.static(__dirname + '/public'));
 //})
 
 app.get('/', (request, response) => {
-	response.render('home.html')
+	response.render('home.hbs')
 });
 
 app.get('/info', (request, response) => {
-	response.render('login.html')
+	response.render('login.hbs')
 });
 
 app.get('/404', (request, response) => {
