@@ -27,8 +27,12 @@ app.get('/', (request, response) => {
 	response.render('home.hbs')
 });
 
-app.get('/info', (request, response) => {
+app.get('/login', (request, response) => {
 	response.render('login.hbs')
+});
+
+app.get('/seats', (request, response) => {
+	response.render('seats.hbs')
 });
 
 app.get('/404', (request, response) => {
