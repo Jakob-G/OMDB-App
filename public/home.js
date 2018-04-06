@@ -70508,7 +70508,7 @@ function getInfo(title){
 function Search(title){
 	return new Promise((resolve,reject) => {
 		request({
-			url: 'http://www.omdbapi.com/?s='+ encodeURIComponent(title)+ '&type=movie&apikey=d8b2684e',
+			url: 'http://www.omdbapi.com/?s='+ encodeURIComponent(title)+ '&apikey=d8b2684e',
 			json: true
 		 }, (error, response, body) => {
 		 	if (error){
