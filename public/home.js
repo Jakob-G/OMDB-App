@@ -70486,8 +70486,7 @@ function changeDisc(text){
 function getInfo(title){
 	return new Promise((resolve,reject) => {
 		request({
-			url: `http://www.omdbapi.com/?i=${encodeURIComponent(title)}&apikey=d8b2684e`,
-			json: true
+			url: 'https://cors-anywhere.herokuapp.com/' + `http://www.omdbapi.com/?i=${encodeURIComponent(title)}&apikey=d8b2684e`
 		}, (error, response, body) => {
 			if (error){
 				reject('cannot conect to OMDB')
@@ -70508,8 +70507,7 @@ function getInfo(title){
 function Search(title){
 	return new Promise((resolve,reject) => {
 		request({
-			url: `http://www.omdbapi.com/?s=${encodeURIComponent(title)}&type=movie&apikey=d8b2684e`,
-			json: true
+			url: 'https://cors-anywhere.herokuapp.com/' + `http://www.omdbapi.com/?s=${encodeURIComponent(title)}&type=movie&apikey=d8b2684e`
 		 }, (error, response, body) => {
 		 	if (error){
 				reject('cannot conect to OMDB')
