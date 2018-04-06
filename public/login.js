@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 //variables //
-
+var logged_in = false
 // functions//
 function addNote(user, password){
 	var string = fs.readFileSync('users.json',function (err) {

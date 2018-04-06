@@ -10,8 +10,6 @@ function highlightSeat(id){
 /// Event Listeners ///
 
 document.addEventListener("click",function(e){
-	console.log(e.target.id);
-	console.log(e.target.className);
 	if(e.target.className == 'seat'){
 		resetSeat(seat)
 		highlightSeat(e.target.id)
