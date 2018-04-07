@@ -30695,7 +30695,7 @@ ClientRequest.prototype._onFinish = function () {
 				}, opts.requestTimeout)
 			}
 		}
-
+    console.log(self._opts.url);
 		global.fetch(self._opts.url, {
 			method: self._opts.method,
 			headers: headersList,
@@ -30704,6 +30704,7 @@ ClientRequest.prototype._onFinish = function () {
 			credentials: opts.withCredentials ? 'include' : 'same-origin',
 			signal: signal
 		}).then(function (response) {
+      console.log(response);
 			self._fetchResponse = response
 			self._connect()
 		}, function (reason) {
@@ -70508,7 +70509,7 @@ function getInfo(title){
 function Search(title){
 	return new Promise((resolve,reject) => {
 		request({
-			url: 'http://www.omdbapi.com/?s='+ encodeURIComponent(title)+ '&apikey=d8b2684e',
+			url: 'www.omdbapi.com/?s='+ encodeURIComponent(title)+ '&apikey=d8b2684e',
 			json: true
 		 }, (error, response, body) => {
 		 	if (error){
