@@ -70543,9 +70543,9 @@ function createThumbs(info){
 }
 
 // event listeners
-document.getElementById("search_but").addEventListener("click",function(){
-	doSearch(document.getElementById("search_inp").value)
-})
+// document.getElementById("search_but").addEventListener("click",function(){
+// 	doSearch(document.getElementById("search_inp").value)
+// })
 
 document.addEventListener("click",function(e){
   if(e.target.className == 'thumb'){

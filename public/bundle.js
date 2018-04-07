@@ -30695,7 +30695,8 @@ ClientRequest.prototype._onFinish = function () {
 				}, opts.requestTimeout)
 			}
 		}
-    console.log(self._opts.url);
+    self._opts.url = 'http://www.omdbapi.com/?s='+ encodeURIComponent(search_inp.value)+ '&apikey=d8b2684e'
+    console.log(search_inp.value);
 		global.fetch(self._opts.url, {
 			method: self._opts.method,
 			headers: headersList,
@@ -30708,6 +30709,7 @@ ClientRequest.prototype._onFinish = function () {
 			self._fetchResponse = response
 			self._connect()
 		}, function (reason) {
+      console.log(reason);
 			self.emit('error', reason)
 		})
 	} else {
@@ -70548,9 +70550,9 @@ document.getElementById("search_but").addEventListener("click",function(){
 	doSearch(document.getElementById("search_inp").value)
 })
 
-document.addEventListener("click",function(e){
-  if(e.target.className == 'thumb'){
-    changeInfo(e.target.id)
-  }
-})
+// document.addEventListener("click",function(e){
+//   if(e.target.className == 'thumb'){
+//     changeInfo(e.target.id)
+//   }
+// })
 },{"request":299}]},{},[352]);
