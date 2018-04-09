@@ -33,6 +33,10 @@ app.get('/', (request, response) => {
 	response.render('home.hbs')
 });
 
+app.get('/json', (request, response) => {
+	response.sendfile(__dirname+'/accounts.json')
+});
+
 app.get('/signup', (request, response) => {
 	response.render('signup.hbs')
 });
