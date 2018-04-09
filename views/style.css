@@ -115,24 +115,29 @@
 	right:2.5%;
 	position: absolute;
 	margin: auto;
+	padding:3px;
 }
 #side_header{
 	padding: 5px;
 	top:5px;
 	position:absolute;
 	border: 3px solid black;
+	padding:3px;
 }
 #search_inp{
-	margin-left: 5px;
-	width:50%
+	margin-left: 0px;
+	width:100%
+	padding:auto;
 }
 #search_but{
 	right:5px;
+	padding:3px;
+	margin:auto;
 }
 #search_results{
 	border: 2px solid black;
 	bottom:0px;
-	height:90%;
+	height:85%;
 	width:100%;
 	position: absolute;
 	overflow: auto;
@@ -215,4 +220,12 @@
 }
  #A1{
  	background-color: grey;
+ }
+ 
+ #titleheader{
+	color:white;
+	position: absolute;
+	top: 0px;
+	padding:0px;
+	margin:auto;
  }
