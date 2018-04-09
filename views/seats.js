@@ -24,7 +24,7 @@ document.getElementById('fake').addEventListener('click', function(){
 			document.getElementById('buy').submit()
 		}
 		else{
-			
+			alert('something went wrong')
 		}
 	}
 })
