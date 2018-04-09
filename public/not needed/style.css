@@ -1,0 +1,204 @@
+/*login style*/
+#login{
+	text-align:center;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	position: absolute;
+	margin: auto;
+	width:400px;
+	height: 400px;
+	background-color: #757575;
+	border: 10px solid black;
+}
+.inp{
+	left:0px;
+	right:0px;
+	position: absolute;
+	margin: auto;
+	width:50%;
+	height:30px;
+}
+#pass_inp{
+	top:150px;
+}
+#user_inp{
+	top:100px;
+}
+#login_submit{
+	right:50px;
+	bottom:50px;
+	position: absolute;
+}
+/* signup style*/
+#signup{
+	text-align:center;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	position: absolute;
+	margin: auto;
+	width:400px;
+	height: 400px;
+	background-color: #757575;
+	border: 10px solid black;
+}
+#signup_submit{
+	right:50px;
+	bottom:50px;
+	position: absolute;
+}
+#fname_inp{
+	top:70px;
+}
+#lname_inp{
+	top:110px;
+}
+#email_inp{
+	top:150px;
+}
+#user_inp2{
+	top:190px;
+}
+#pass_inp2{
+	top:230px;
+}
+#pass2_inp2{
+	top:270px;
+}
+/*home style*/
+#header{
+	width:100%;
+	background-color: red;
+	top:0px;
+	position: absolute;
+	left: 0px;
+	height:40px;
+}
+#signup_but{
+	right:100px;
+}
+.but{
+	right:10px;
+	position: absolute;
+	top:25%;
+}
+#center{
+	width:75%;
+	height:80%;
+	top:15%;
+	left:2.5%;
+	position: absolute;
+	margin: auto;
+	background-color: black;
+	overflow: auto;
+	color:white;
+}
+#sidebar{
+	width:17.5%;
+	height:80%;
+	top:15%;
+	right:2.5%;
+	position: absolute;
+	margin: auto;
+	background-color: black;
+}
+#side_header{
+	top:5px;
+	position:absolute;
+	background-color: red;
+}
+#search_inp{
+	margin-left: 5px;
+	width:50%
+}
+#search_but{
+	right:5px;
+}
+#search_results{
+	background-color: blue;
+	bottom:0px;
+	height:90%;
+	width:100%;
+	position: absolute;
+	overflow: auto;
+}
+.thumb{
+	width:48%;
+	height:auto;
+}
+#info{
+	display: inline-block;
+	width:20%;
+	height:100%;
+	color: white;
+}
+.image{
+	height:auto;
+	width:30%;
+}
+#buy_but{
+	right:0px;
+	position: absolute;
+	top:0px;
+}
+#discription{
+	position: absolute;
+	font-size: 20px;
+	top: 50px;
+	right:1%;
+	width:68%;
+}
+#title{
+	position: absolute;
+	font-size: 40px;
+	top: 0px;
+	left: 30%;
+	width:60%;
+	text-align: center;
+}
+/*seats style*/
+
+#seats{
+	width:506px;
+	height: 450px;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	position: absolute;
+	margin: auto;
+	background-color: white;
+	border: 10px solid black;
+}
+
+.seat{
+	width: 25px;
+	height: 30px;
+	display: inline-block;
+	background-color: #73009c;
+	margin: 5px;
+}
+.isle{
+	background-color: white;
+	width:35px;
+	display: inline-block;
+}
+#screen{
+	height:20px;
+	width: 95%;
+	text-align: center;
+	background-color: black;
+	color: white;
+	left:0px;
+	right:0px;
+	margin:auto;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	padding-top: 5px
+}
+ #A1{
+ 	background-color: grey;
+ }
