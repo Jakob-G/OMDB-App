@@ -1,9 +1,21 @@
 const fs = require('fs');
+const request = require('request')
 
+var getUsers = () =>{
+	var users = loadFile()
+	return users
+}
+
+var saveMovies = (user, title, seat) => {
+	var account = loadFile();
+	account[user].movies[title] = seat
+	writeFile(account)
+}
 
 var loadFile = () => {
 	try {
 		var usersArr = JSON.parse(fs.readFileSync('accounts.json'));
+
 		return usersArr
 	}
 	catch (exception) { 
@@ -16,57 +28,26 @@ var loadFile = () => {
 	}
 };
 
-var duplicateUsers = (usersArr, username) => {
-	loadFile(usersArr);
-	for (var i = 0; i < usersArr.length; i++) {
-		if(username == usersArr[i].user) {
-			alert('Username already existed')
-			return false
-		}else {
-			return true
-		}
-	}
-}
-
-var loginCheck = (usersArr, username, password) => {
-	loadFile(usersArr);
-	for (var i = 0; i < usersArr.length; i++) {
-		if(username != usersArr[i].user || password != usersArr[i].pass) {
-			alert('Incorrect Username or Password')
-			return false
-		}else {
-			return true
-		}
-	}
-}
-
-var passCheck = (pass1, pass2) => {
-	if(pass1 != pass2) {
-		alert('Passwords did not match');
-		return false
-	}else {
-		return true
-	}
-}
 
 var writeFile = (usersArr) => {
 	fs.writeFileSync('accounts.json', JSON.stringify(usersArr));
+	var thing = loadFile()
+	console.log(thing);
 };
 
 
 var addUser = (username, info) => {
-
 	var account = loadFile();
-	console.log(account);
 	account[username] = info
 	//usersArr.push(account);
 	writeFile(account);
-	
-	module.exports = {
-		loadFile, writeFile, addUser
-	};
 };
+
 module.exports = {
-	loadFile, writeFile, addUser
+	loadFile,
+	writeFile, 
+	addUser,
+	getUsers,
+	saveMovies
 	};
 

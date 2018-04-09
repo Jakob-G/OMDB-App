@@ -6,6 +6,7 @@ function resetSeat(id){
 }
 function highlightSeat(id){
 	document.getElementById(id).style.backgroundColor = 'blue'
+	document.getElementById('seat_inp').value = id
 }
 /// Event Listeners ///
 
@@ -17,3 +18,13 @@ document.addEventListener("click",function(e){
 	}
 });
 
+document.getElementById('fake').addEventListener('click', function(){
+	if (document.getElementById('seat_inp').value != null){
+		if (confirm(`are you sure you want to buy seat ${document.getElementById('seat_inp').value}`)){
+			document.getElementById('buy').submit()
+		}
+		else{
+			
+		}
+	}
+})

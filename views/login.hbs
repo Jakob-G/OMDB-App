@@ -6,11 +6,14 @@
 	    <link href="style.css" rel="styleSheet" type="text/css"/>
 	</head>
 
-	<body>
+	<body id='body'>
+		<input type="text" id='users' class="invis" value="{{users}}">
 		<div id="login">
-			<input id="user_inp" class="inp" type="text" name="username" placeholder="Username">
-			<input id="pass_inp" class="inp" type="password" name="password" placeholder="Password">
-			<button id="login_submit">LOGIN</button>
+			<form action="/" id="loginForm" method="post">
+				<input id="user_inp" class="inp" type="text" name="username" placeholder="Username">
+				<input id="pass_inp" class="inp" type="password" name="password" placeholder="Password">	
+			</form>
+			<input id="login_submit" type='submit' name='login'>
 		</div>
 		<script src="login.js"></script>
 	</body>

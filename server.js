@@ -33,6 +33,16 @@ app.get('/', (request, response) => {
 	response.render('home.hbs')
 });
 
+
+app.get('/login', (request, response) => {
+	response.render('login.hbs',{
+		users: JSON.stringify(todo.getUsers())
+
+	})
+	//console.log(typeof todo.getUsers());
+
+});
+
 app.get('/json', (request, response) => {
 	response.sendfile(__dirname+'/accounts.json')
 });
@@ -42,16 +52,42 @@ app.get('/signup', (request, response) => {
 });
 
 app.post('/signup', (request, response) => {
-	console.log(request.body)
+	//console.log(request.body)
 });
 
-app.get('/congratulations', (request, response) => {
-	response.render('congratulations.hbs')
+app.get('/', (request, response) => {
+	response.render('home2.hbs')
+});
+
+app.post('/', (request, response) => {
+	//console.log(request.body);
+	response.render('home2.hbs',{
+		user: request.body.username
+	})
+});
+
+app.post('/seats', (request, response) => {
+	//console.log(request.body);
+	response.render('seats.hbs',{
+		user: request.body.user,
+		title: request.body.title
+	})
+});
+
+app.post('/confirm', (request, response) => {
+	console.log(request.body);
+	response.render('home2.hbs')
+	todo.saveMovies(request.body.user, request.body.title, request.body.seat);
 });
 
 app.post('/congratulations', (request, response) => {
 	response.render('congratulations.hbs')
-    todo.addUser(request.body.emailAddr, request.body.password1);
+    todo.addUser(request.body.emailAddr, {
+    	'passwd':request.body.password1,
+    	'fname':request.body.firstName,
+    	'lname':request.body.lastName,
+    	'movies': {}
+    });
 });
 
 app.listen(port, () => {

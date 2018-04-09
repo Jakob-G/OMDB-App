@@ -2,7 +2,7 @@
 <html>
 	<head>
 	    <meta charset="utf-8">
-	    <title>Home</title>
+	    <title>not home</title>
 	    <link href="style.css" rel="styleSheet" type="text/css"/>
 	</head>
 
@@ -12,7 +12,11 @@
 			<button id="login_but" class="but" onclick="window.location.href='/login'">LOGIN</button>
 		</header>
 		<div id="center">
-			<img id='bigImg' class="image" src=''>
+			<img id='bigImg'  class="image" src=''>
+			<form action='/seats' id='buyForm' method='post'>
+				<input class='invis' name='title' id='title' type='text' value=''>
+				<input class='invis' name='user' id='user' type='text' value='{{user}}'>
+			</form>
 			<button id="buy_but">Reserve seats</button>
 			<div id="title">
 			</div>
@@ -32,10 +36,6 @@
 		</div>
 		
 		<script src=home.js></script>
-		<script >
-			document.getElementById('buy_but').addEventListener('click', function(){
-				alert('please login befor using this function')
-			})
-		</script>
+		<script src=login2.js></script>
 	</body>
 </html>

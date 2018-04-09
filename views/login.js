@@ -1,23 +1,14 @@
-const fs = require('fs')
+var users = JSON.parse(document.getElementById('users').value);
 
-//variables //
-var logged_in = false
-// functions//
-function addNote(user, password){
-	var string = fs.readFileSync('users.json',function (err) {
-  		if (err) {
-  			throw err
-  		}
-  	});
-	var note = JSON.parse(string)
-	note[user] = password
-	note = JSON.stringify(note)
-	fs.writeFileSync('users.json', note,function (err) {
-  		if (err) {
-  			throw err
-  		}
-  	});
-}
 
-// event listeners //
+
+document.getElementById('login_submit').addEventListener('click', function(){
+	for(key in users){
+		if (key == document.getElementById('user_inp').value){
+			if(users[key].passwd ==  document.getElementById('pass_inp').value){
+				document.getElementById('loginForm').submit()
+			}
+		}
+	}
+})
 
