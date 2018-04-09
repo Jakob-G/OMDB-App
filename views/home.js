@@ -70469,7 +70469,8 @@ function changeInfo(input){
 }
 
 function changeTitle(title){
-  document.getElementById('title').innerHTML = title
+  document.getElementById('titles').innerHTML = title
+  console.log(document.getElementById('titles'));
 }
 function changeImg(url){
   if(url == "N/A"){

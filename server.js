@@ -43,6 +43,14 @@ app.get('/login', (request, response) => {
 
 });
 
+app.post('/myMovie', (request, response) =>{
+	var json = {}
+	users = todo.loadFile()
+	json[request.body.user] = users[request.body.user]
+	console.log(json);
+	response.send(json)
+})
+
 app.get('/json', (request, response) => {
 	response.sendfile(__dirname+'/accounts.json')
 });
@@ -54,6 +62,7 @@ app.get('/signup', (request, response) => {
 app.post('/signup', (request, response) => {
 	//console.log(request.body)
 });
+
 
 app.get('/', (request, response) => {
 	response.render('home2.hbs')
@@ -75,8 +84,9 @@ app.post('/seats', (request, response) => {
 });
 
 app.post('/confirm', (request, response) => {
-	console.log(request.body);
-	response.render('home2.hbs')
+	response.render('home2.hbs',{
+		user: request.body.user
+	})
 	todo.saveMovies(request.body.user, request.body.title, request.body.seat);
 });
 

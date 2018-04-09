@@ -8,13 +8,14 @@
 
 	<body id='body'>
 		<header id="header">
+			<!--button id="show_movies" class='but'>MY MOVIES</button-->
 			<button id="signup_but" class="but" onclick="window.location.href='/signup'">SIGN UP</button>
 			<button id="login_but" class="but" onclick="window.location.href='/login'">LOGIN</button>
 		</header>
 		<div id="center">
 			<img id='bigImg' class="image" src=''>
 			<button id="buy_but">Reserve seats</button>
-			<div id="title">
+			<div id="titles">
 			</div>
 			<div id="discription">
 			</div>
@@ -36,6 +37,9 @@
 			document.getElementById('buy_but').addEventListener('click', function(){
 				alert('please login befor using this function')
 			})
+			//document.getElementById('show_movies').addEventListener('click', function(){
+			//	alert('please login befor using this function')
+			//})
 		</script>
 	</body>
 </html>

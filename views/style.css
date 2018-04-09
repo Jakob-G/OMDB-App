@@ -75,6 +75,9 @@
 	top:230px;
 }
 /*home style*/
+#show_movies{
+	left:25px
+}
 #header{
 	width:100%;
 	background-color: black;
@@ -100,6 +103,10 @@
 	margin: auto;
 	border: 4px solid;
 	overflow: auto;
+}
+.congrats{
+	text-align: center;
+	right: 50px;
 }
 #sidebar{
 	width:17.5%;
@@ -156,7 +163,7 @@
 	right:1%;
 	width:68%;
 }
-#title{
+#titles{
 	position: absolute;
 	font-size: 40px;
 	top: 0px;
